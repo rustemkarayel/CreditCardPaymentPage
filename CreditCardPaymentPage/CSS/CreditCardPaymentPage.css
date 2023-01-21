@@ -1,0 +1,227 @@
+*
+{
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+    height: 95vh;
+    background-image:url("../imgs/bodybackground.webp");
+}
+.container{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:30%;
+    height:60%;
+}
+.creditCardParts{
+    position: relative;
+    width:100%;
+    height:40%;
+    margin-bottom: 20px;
+}
+.front-card{
+    position: absolute;
+    background-image:url("../imgs/cardbackground.png");
+    background-size: 100% 100%;
+    overflow: hidden;
+    width:65%;
+    height: 100%;
+    top:-50%;
+    left:17.5%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    opacity: 1;
+}
+.chip{
+    float:left;
+    margin-left: 5px;
+}
+.contactless{
+    float:left;
+    margin-top: 15px;
+}
+.visa{
+    float: right;
+    margin: 10px;
+}
+.chip img{
+    width:70px;
+    height: 55px;
+}
+.contactless img{
+    width: 35px;
+    height: 30px;
+}
+.visa img{
+    width:70px;
+    height: 35px;
+}
+.card-number-parts{
+    clear: both;
+    text-align: center;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+}
+.holder{
+    float: left;
+    margin-left: 10px;
+}
+.expires{
+    float: right;
+    margin-right: 10px;
+}
+.title{
+    font-size: 13px;
+    color: rgb(255, 255, 255);
+}
+.text{
+    font-size:21px;
+    color: rgb(255, 255, 255);
+}
+.back-card{
+    position: absolute;
+    background-image:url("../imgs/cardbackground.png");
+    background-size: 100% 100%;
+    overflow: hidden;
+    width:65%;
+    height: 100%;
+    top:-50%;
+    left:17.5%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    opacity: 0;
+    transform: rotateY(180deg);  
+}
+.black-line{
+    width: 100%;
+    height: 17%;
+    background-color: black;
+    opacity: 0.7;
+}
+.cvv-text-input{
+    height: 35%;
+    width: 100%;
+    margin-top: 1%;
+}
+.cvv-text{
+    float:right;
+    color:rgb(255, 255, 255);
+    margin-right: 4%;
+}
+.cvv{
+    height: 60%;
+    width: 92%;
+    background-color: white;
+    margin: auto;
+    text-align:right;
+    border-radius: 5px;
+}
+.visa-back img{
+    width:70px;
+    height: 30px;
+    float: right;
+    margin-right: 4%;
+    margin-top: -2%;
+}
+.form-container{
+    position: absolute;
+    width: 100%;
+    height: 455px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    margin-bottom: 30px;
+    padding-top: 150px;
+    top:15px;
+    z-index: -2;
+}
+label{
+    color:rgb(56, 56, 56);
+    font-size: 4.5mm;
+    margin-left: 20px;
+}
+input
+{
+    border:none;
+    box-shadow:0px 5px 15px  rgba(0, 0, 0, 0.35) ;
+    border-radius:3px;
+}
+input[type=text]
+{
+    margin-left: 20px;
+    margin-bottom: 20px;
+    height: 40px;
+    width: 90%;
+}
+.expire{
+    height: 75px;
+    width: 100%;
+    margin-bottom: 12px;
+}
+.expiretion-date{
+float: left;
+width: 55%;
+}
+select{
+    width: 40%;
+    height: 40px;
+    border: none;
+    box-shadow:0px 5px 15px  rgba(0, 0, 0, 0.35);
+    margin-left: 20px;
+    border-radius:3px;
+}
+.cvv-information{
+    float: right;
+    width: 35%;
+    margin-right: 30px;
+}
+.cvv-input{   
+    height: 40px;
+    width: 30%;
+}
+button
+{
+    width: 90%;
+    margin-left: 20px;
+    background-image: linear-gradient(to right, #0737f7,#32a5cb,#0737f7);
+    color: white;
+    border: none;
+    padding: 15px 0px;
+    border-radius: 10px;  
+}
+.front-month-year{
+    width: 100%;
+    height: 70%;
+}
+.front-month{
+    width: 30%;
+    height: 100%;
+    display: inline-block;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    color: white;
+}
+.front-slash{
+    width: 15%;
+    height: 100%;
+    display: inline-block;    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    color: white;
+}
+.front-year{
+    width: 35%;
+    height: 100%;
+    display: inline-block;    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    color: white;
+}

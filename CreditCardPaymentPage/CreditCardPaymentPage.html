@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreditCardPaymentPage</title>
+    <link rel="stylesheet" href="CSS/CreditCardPaymentPage.css">
+</head>
+<body>
+    <div class="container">
+        <div class="creditCardParts">
+            <div class="front-card">             
+                <div class="chip-contactless-visa">
+                    <div class="chip">
+                        <img src="imgs/chip.png">
+                    </div>
+                    <div class="contactless">
+                        <img src="imgs/contactless.png">
+                    </div>
+                    <div class="visa">
+                        <img src="imgs/visa.png">
+                    </div>
+                </div>
+                <div class="card-number-parts" id="number-parts">
+                    <div class="keys"></div>
+                    <div class="keys"></div>
+                    <div class="keys"></div>
+                    <div class="keys"></div>
+                </div>
+                <div id="holder-and-expires">
+                    <div class="holder">
+                        <span class="holder-title title">Card Holder</span><br>
+                        <span class="holder-text text">Full Name</span>
+                    </div>
+                    <div class="expires">
+                            <span class="expires-title title">Expires</span><br>
+                            <div class="front-month-year">
+                                <div class="front-month">
+                                    MM
+                                </div>
+                                <div class="front-slash">
+                                    /
+                                </div>
+                                <div class="front-year">
+                                    YY
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <div class="back-card">
+                <div class="black-line"></div>
+                    <div class="cvv-text-input">
+                        <span class="cvv-text">CVV</span><br>
+                        <div class="cvv"></div>
+                    </div>
+                    <div class="visa-back"><img src="imgs/visa.png"></div>
+            </div>         
+        </div>
+        <div class="form-container">
+            <label>Card Number</label><br>
+            <input type="text" class="card-number-input" id="card-number-input" name="cardNumber" maxlength="16" 
+                onfocus="cardNumberFocus('card-number-parts');"
+                onkeyup="cardNumberChange('card-number-input', 'card-number-parts');"
+                onblur="cardNumberLoseFocus('card-number-parts');">
+            <label>Card Holders</label><br>
+            <input type="text" id="card-holder-input" name="cardHolder" class="entry2" maxlength="18"
+                onfocus="cardNumberFocus('holder');"
+                onkeyup="cardNumberChange('entry2', 'holder-text');"
+                onblur="cardNumberLoseFocus('holder');">
+            <div class="expire">
+                <div class="expiretion-date">
+                    <label>Expiretion Date</label><br>
+                    <select class="months"
+                    onclick="cardNumberFocus('expires');"
+                    onchange="cardDayChange('months', 'front-month');"
+                    onblur="cardNumberLoseFocus('expires');">               
+                        <option>Month</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6 </option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                    </select>
+                    <select class="years"
+                    onclick="cardNumberFocus('expires');"
+                    onchange="cardDayChange('years', 'front-year');"
+                    onblur="cardNumberLoseFocus('expires');">
+                        <option>2022</option>
+                        <option>2023</option>
+                        <option>2024</option>
+                        <option>2025</option>
+                        <option>2026</option>
+                        <option>2027</option>
+                        <option>2028</option>
+                        <option>2029</option>
+                    </select>
+                </div>               
+                <div class="cvv-information">
+                    <label>CVV</label><br>
+                    <input type="text" class="cvv-input" id="cvv-input" name="cvv" maxlength="3"
+                    onclick="cardRotate('front-card','back-card');"
+                    onkeyup="cardCvvChange('cvv-input','cvv');"
+                    onblur="cardCvvLoseFocus('front-card','back-card')">
+                </div>
+            </div>
+            <div class="cardButton"><button>Submit</button></div>
+        </div>
+    </div>
+<script src="JavaScript/CreditCardPaymentPage.js"></script>
+</body>
+</html>
